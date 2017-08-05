@@ -1,0 +1,1 @@
+data PeanoNumber = Zero | Succ PeanoNumber deriving (Show)
