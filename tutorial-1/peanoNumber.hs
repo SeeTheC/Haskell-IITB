@@ -11,6 +11,17 @@ peanoToInt Zero = 0
 peanoToInt (Succ n) | n==Zero = 1
                     | otherwise = 1+(peanoToInt n) 
 
+-- Peano number is even or not
+peanoEven:: Peano -> Bool
+peanoEven Zero = True
+peanoEven (Succ n) = peanoOdd n
+
+-- Peano number is odd or not
+peanoOdd:: Peano -> Bool
+peanoOdd Zero = False
+peanoOdd (Succ n) = peanoEven n
+
+-- Instance of Num			
 instance Num Peano where
                    x + y =  intToPeano (a+b)
                          where a=peanoToInt(x)
