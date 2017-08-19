@@ -18,3 +18,11 @@ removeOuterList [] = []
 removeOuterList (x:[]) = x
 removeOuterList (x:xs) = x ++ (removeOuterList xs)
 
+
+
+
+-- Method 2 : Not Vey Efficient. Repeative computation 
+summands1 1 = [[1]]
+summands1 n = [  a:el | a<-[1..(n-1)], el <-(summands1 (n-a)) ] ++ [[n]]
+
+

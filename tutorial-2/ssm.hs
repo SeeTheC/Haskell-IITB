@@ -8,3 +8,7 @@ ssm_aux (x:xs) e | x <= e = (ssm_aux xs e)
                                else l1
                                where l1 = e:(ssm_aux xs x)
                                      l2 = (ssm_aux xs e) 
+
+
+
+
