@@ -1,8 +1,7 @@
-
 -- Designed to solve any crypt problem
 crypt = rmDuplicate ( concat (reverse (concat ans)) )
         where l=map (\(x,y,z)->[x,y,z]) (zip3 "#send" "#more" "money")
-              ans=(take 1 (crypt_aux l) )
+              ans=(take 3 (crypt_aux l) )
               rmDuplicate l=foldl (\y x -> if not (x `elem` y) && (fst x) /= '#' then y++[x] else y) [] l
        
 
