@@ -38,4 +38,4 @@ instance Num Peano where
                    signum x | x==Zero = Zero
                             | otherwise = Succ Zero                            
 
-                   abs x = x
+                   abs x = x	
